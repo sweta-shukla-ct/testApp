@@ -1,1 +1,19 @@
-<app-homepage></app-homepage>
+<button routerLink="/home-page">Home</button>
+<button routerLink="/contact-page">Contact</button>
+<button routerLink="/services-page">Services</button>
+<router-outlet></router-outlet>
+
+<div class="contact">
+    <h2>We love to hear from you!</h2>
+    <div class = "form-box">
+<form name = "contact" method="POST">
+   <input type="hidden" name="form-name"  value="contact-form"/>
+   <label> Name: </label>
+   <input type="text" name="name" class="input"/><br>
+   <label> Email: </label>
+   <input type="email" name="email" class="input" required/><br>
+   <label> Message: </label>
+   <textarea name="message" class="textarea" placeholder="Please go ahead!"></textarea><br>
+   <button type="submit">Submit</button>
+</form>
+</div></div>
