@@ -5,12 +5,7 @@ import { ServicesPageComponent } from './services-page/services-page.component';
 const routes: Routes = [
   {
     path: '',
-    children: [
-      {
-        path: 'services-page',
-        component: ServicesPageComponent,
-      },
-    ]
+    component: ServicesPageComponent,
   }
 ];
 

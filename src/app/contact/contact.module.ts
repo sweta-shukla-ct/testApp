@@ -1,11 +1,7 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule, ɵPLATFORM_BROWSER_ID } from '@angular/common';
-
 import { ContactRoutingModule } from './contact-routing.module';
 import { ContactComponent } from './contact-page/contact-page.component';
-import { RouterModule } from '@angular/router';
-import { BrowserModule } from '@angular/platform-browser';
-
 
 @NgModule({
   declarations: [
@@ -17,8 +13,7 @@ import { BrowserModule } from '@angular/platform-browser';
   ],
   bootstrap: [
     ContactComponent
-  ],
-  exports: [ContactComponent]
+  ]
 })
 export class ContactModule {
   constructor(){

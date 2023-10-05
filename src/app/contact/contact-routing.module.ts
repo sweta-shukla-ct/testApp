@@ -1,21 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CanDeactivateGuard } from '../can-deactivate-guard.service';
 import { ContactComponent } from './contact-page/contact-page.component';
 
 const routes: Routes = [
   {
     path: '',
-    children: [
-      {
-        path: 'contact-page',
-        component: ContactComponent,
-      },
-    ]
+    component: ContactComponent,
+    canDeactivate: [CanDeactivateGuard]
   }
 ];
 
+export default RouterModule.forRoot(routes);
+
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [CanDeactivateGuard]
 })
 export class ContactRoutingModule { }
